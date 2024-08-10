@@ -36,3 +36,46 @@ down_data_dir/
     ├── sample_1.ext
     └── ...
 ```
+# Pretraining
+
+- run_pt.py
+```bash
+usage: run_pt.py [-h] --data-dir DIR [--num-leads N] [--workers N]
+                 [--epochs N] [--batch-size N] [--learning-rate LR]
+                 [--gamma L] [--lambd L] [--projector MLP] [--print-freq N]
+                 [--checkpoint-dir DIR]
+```
+
+- data-dir is required.
+```bash
+python run_pt.py --data-dir pt_data_dir
+```
+# Linear Probing
+
+- run_lp.py
+```bash
+usage: run_lp.py [-h] --data-dir DIR --checkpoint DIR --num-classes N
+                 [--feat-dir DIR] [--num-leads N] [--workers N] [--epochs N]
+                 [--batch-size N] [--learning-rate LR]
+```
+
+- data-dir, checkpoint, num-classes are required.
+```bash
+python run_lp.py --data-dir down_data_dir --checkpoint checkpoint_file --num-classes N
+```
+# Fine-Tuning
+
+- run.ft.py
+```bash
+usage: run_ft.py [-h] --data-dir DIR --checkpoint DIR --num-classes N
+                 [--fraction L] [--model-dir DIR] [--workers N] [--epochs N]
+                 [--batch-size N] [--learning-rate LR]
+```
+
+- data-dir, checkpoint, num-classes are required.
+```bash
+python run_ft.py --data-dir down_data_dir --checkpoint checkpoint_file --num-classes N
+```
+
+
+**WARNING: This code implementation does not support multi-gpu training!**
