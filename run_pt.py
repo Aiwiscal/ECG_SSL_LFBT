@@ -10,7 +10,7 @@ from data_utils.multi_view_data_injector import MultiViewDataInjector
 from data_utils.augmentations import RandomResizeCropTimeOut, ToTensor
 from models.vgg_1d import VGG16
 
-parser = argparse.ArgumentParser(description='LFBT Pretraining')
+parser = argparse.ArgumentParser(description='Lead-Fusion Barlow Twins Pretraining')
 parser.add_argument('--data-dir', type=Path, required=True,
                     metavar='DIR', help='data path')
 parser.add_argument('--num-leads', default=8, type=int, metavar='N', help="the number of leads")
@@ -41,7 +41,7 @@ def off_diagonal(x):
     return x.flatten()[:-1].view(n - 1, n + 1)[:, 1:].flatten()
 
 
-class LFBT(object):
+class LeadFusionBT(object):
     def __init__(self, args):
         super().__init__()
         self.args = args
@@ -94,7 +94,7 @@ class LFBT(object):
 def main_worker(gpu, args):
 
     args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
-    model = LFBT(args)
+    model = LeadFusionBT(args)
 
     param_weights = []
     param_biases = []

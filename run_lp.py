@@ -12,7 +12,7 @@ from data_utils.cls_datasets import get_data_loaders
 from data_utils.cls_datasets import LinearClsDataset
 from models.vgg_1d import VGG16
 
-parser = argparse.ArgumentParser(description='LFBT Linear Probing')
+parser = argparse.ArgumentParser(description='Lead-Fusion Barlow Twins Linear Probing')
 parser.add_argument('--data-dir', type=str, required=True,
                     metavar='DIR', help='data path')
 parser.add_argument('--checkpoint', type=Path, required=True,

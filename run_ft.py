@@ -9,7 +9,7 @@ from models.mbn import MultiBranchNet
 from tqdm import tqdm
 from sklearn.metrics import confusion_matrix, roc_auc_score, average_precision_score
 
-parser = argparse.ArgumentParser(description='LFBT Fine Tuning')
+parser = argparse.ArgumentParser(description='Lead-Fusion Barlow Twins Fine Tuning')
 parser.add_argument('--data-dir', type=str, required=True,
                     metavar='DIR', help='data path')
 parser.add_argument('--checkpoint', type=Path, required=True,
