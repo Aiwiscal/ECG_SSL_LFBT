@@ -41,7 +41,7 @@ def off_diagonal(x):
     return x.flatten()[:-1].view(n - 1, n + 1)[:, 1:].flatten()
 
 
-class BarlowTwins(object):
+class LFBT(object):
     def __init__(self, args):
         super().__init__()
         self.args = args
@@ -94,7 +94,7 @@ class BarlowTwins(object):
 def main_worker(gpu, args):
 
     args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
-    model = BarlowTwins(args)
+    model = LFBT(args)
 
     param_weights = []
     param_biases = []
