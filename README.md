@@ -19,6 +19,7 @@ tqdm==4.61.2
   - [http://2018.icbeb.org/Challenge.html](http://2018.icbeb.org/Challenge.html)
   - [https://figshare.com/collections/ChapmanECG/4560497/2](https://figshare.com/collections/ChapmanECG/4560497/2)
 - The Shanghai Ninth People's Hospital (SNPH) database is confidential. 
+- Records with multiple labels are removed. 
 - Each ECG should be transferred to a numpy array (shape: C(lead)×L(length)) and saved as an npy file (.npy). The resampling is implemented by a function from SciPy (scipy.signal.resample); Z-score normalizes each ECG.
 - The dataset for pretraining should be structured as follows:
 ```bash
