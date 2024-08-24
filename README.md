@@ -2,6 +2,7 @@
 
 # Introduction
 Code implementation of **Lead-Fusion Barlow Twins (LFBT)**, a new self-supervised learning (SSL) method for multilead electrocardiograms (ECGs).
+**The paper is Under Review**.
 # Requirements
 ```
 numpy==1.22.4
@@ -12,9 +13,13 @@ torchvision==0.12.0
 tqdm==4.61.2
 ```
 # Data
-- The Ningbo First Hospital (NFH), PTB-XL, CPSC, and Chapman database can be downloaded from [https://physionet.org/content/challenge-2021/1.0.3/](https://physionet.org/content/challenge-2021/1.0.3/)
+- The Ningbo First Hospital (NFH), PTB-XL, CPSC, and Chapman database can be downloaded from:
+  - [https://physionet.org/content/challenge-2021/1.0.3/training/ningbo/#files-panel](https://physionet.org/content/challenge-2021/1.0.3/training/ningbo/#files-panel)
+  - [https://physionet.org/content/ptb-xl/1.0.3/](https://physionet.org/content/ptb-xl/1.0.3/)
+  - [http://2018.icbeb.org/Challenge.html](http://2018.icbeb.org/Challenge.html)
+  - [https://figshare.com/collections/ChapmanECG/4560497/2](https://figshare.com/collections/ChapmanECG/4560497/2)
 - The Shanghai Ninth People's Hospital (SNPH) database is confidential. 
-- Each ECG should be transferred to a numpy array (shape: C(lead)×L(length)) and saved as an npy file (.npy). Z-score normalizes each ECG.
+- Each ECG should be transferred to a numpy array (shape: C(lead)×L(length)) and saved as an npy file (.npy). The resampling is implemented by a function from SciPy (scipy.signal.resample); Z-score normalizes each ECG.
 - The dataset for pretraining should be structured as follows:
 ```bash
 pt_data_dir/
