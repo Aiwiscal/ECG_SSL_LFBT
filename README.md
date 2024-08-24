@@ -42,6 +42,7 @@ down_data_dir/
     ├── sample_1.ext
     └── ...
 ```
+- Please refer to the paper for more information. 
 # Pretraining
 
 - run_pt.py
