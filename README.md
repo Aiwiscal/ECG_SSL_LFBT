@@ -2,7 +2,8 @@
 
 # Introduction
 Code implementation of **Lead-Fusion Barlow Twins (LFBT)**, a new self-supervised learning (SSL) method for multilead electrocardiograms (ECGs).
-**The paper is Under Review**.
+
+W. Liu, S. Pan, Z. Li, S. Chang, Q. Huang, N. Jiang, Lead-fusion Barlow twins: A fused self-supervised learning method for multi-lead electrocardiograms, Inf. Fusion. 114 (2025) 102698. https://doi.org/https://doi.org/10.1016/j.inffus.2024.102698.
 # Requirements
 ```
 numpy==1.22.4
