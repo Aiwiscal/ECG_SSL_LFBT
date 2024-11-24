@@ -87,3 +87,5 @@ python run_ft.py --data-dir down_data_dir --checkpoint checkpoint_file --num-cla
 
 
 **WARNING: This code implementation does not support multi-gpu training!**
+
+Reference：https://github.com/facebookresearch/barlowtwins
